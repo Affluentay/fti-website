@@ -8,9 +8,9 @@ import Impact from "./pages/Impact";
 import Donate from "./pages/Donate";
 import Volunteer from "./pages/Volunteer";
 import Contact from "./pages/Contact";
-import Blog from "./pages/blog";
-import BlogPost from "./pages/blogPost";
-import AdminBlog from "./pages/adminBlog";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import AdminBlog from "./pages/AdminBlog";
 import "./index.css";
 
 export default function App() {

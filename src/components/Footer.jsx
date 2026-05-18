@@ -11,7 +11,7 @@ export default function Footer() {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <img src="/images/17c78463-0a35-4e4c-b5b8-63389157f295.png" alt="FTI Logo"
-    style={{ height: 50, width: "auto", objectFit: "contain" }} /> 
+    style={{ height: 120, width: "70", }} /> 
             <div>
             </div>
           </div>

@@ -11,24 +11,27 @@ export default function Footer() {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <img src="/images/17c78463-0a35-4e4c-b5b8-63389157f295.png" alt="FTI Logo"
-              style={{ height: 50, width: 50, borderRadius: "50%", objectFit: "cover", border: "2px solid #18BC9C" }} />
+    style={{ height: 50, width: "auto", objectFit: "contain" }} /> 
             <div>
-              <div style={{ fontFamily: "Raleway, sans-serif", fontSize: 18, fontWeight: 800, color: "#fff" }}>First Thought Initiative</div>
-              <div style={{ fontSize: 12, color: "#18BC9C" }}>Dressing hearts, sharing hope…</div>
             </div>
           </div>
           <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.8, marginBottom: 20 }}>
             A non-governmental organization dedicated to supporting underprivileged children, teenagers, and youths in Benin City, Nigeria.
           </p>
-          <div style={{ display: "flex", gap: 10 }}>
-            {["Facebook", "Instagram", "Twitter"].map(s => (
-              <a key={s} href="#" style={{
-                padding: "6px 14px", borderRadius: 20,
-                border: "1px solid rgba(24,188,156,0.4)",
-                color: "#18BC9C", fontSize: 12, fontWeight: 600,
-              }}>{s}</a>
-            ))}
-          </div>
+          <div style={{ display: "flex", gap: 10, marginTop: 8, flexWrap: "wrap" }}>
+  {[
+    { name: "Facebook", color: "#1877f2", svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
+    { name: "Instagram", color: "#e4405f", svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg> },
+    { name: "Twitter", color: "#1da1f2", svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg> },
+  ].map(s => (
+    <a key={s.name} href="#" style={{
+      width: 36, height: 36, borderRadius: 10,
+      background: s.color,
+      display: "flex", alignItems: "center", justifyContent: "center",
+      textDecoration: "none",
+    }} title={s.name}>{s.svg}</a>
+  ))}
+</div>
         </div>
 
         <div>

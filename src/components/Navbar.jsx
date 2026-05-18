@@ -35,9 +35,9 @@ export default function Navbar() {
         display: "flex", alignItems: "center", justifyContent: "space-between",
         transition: "all 0.3s ease",
       }}>
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-          <img src="/images/17c78463-0a35-4e4c-b5b8-63389157f295.png" alt="FTI Logo"
-            style={{ height: 40, width: 40, borderRadius: "50%", objectFit: "cover", border: "2px solid #18BC9C" }} />
+        <Link to="/" style={{ textDecoration: "none" }}>
+  <img src="/images/17c78463-0a35-4e4c-b5b8-63389157f295.png" alt="FTI Logo"
+    style={{ height: 50, width: "auto", objectFit: "contain" }} />
           <div>
             <div style={{ fontFamily: "Raleway, sans-serif", fontSize: 14, fontWeight: 800, color: "#fff", lineHeight: 1.1 }}>First Thought</div>
             <div style={{ fontFamily: "Raleway, sans-serif", fontSize: 11, fontWeight: 600, color: "#18BC9C", lineHeight: 1.1 }}>Initiative</div>

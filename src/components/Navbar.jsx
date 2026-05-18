@@ -37,11 +37,7 @@ export default function Navbar() {
       }}>
         <Link to="/" style={{ textDecoration: "none" }}>
   <img src="/images/17c78463-0a35-4e4c-b5b8-63389157f295.png" alt="FTI Logo"
-    style={{ height: 50, width: "auto", objectFit: "contain" }} />
-          <div>
-            <div style={{ fontFamily: "Raleway, sans-serif", fontSize: 14, fontWeight: 800, color: "#fff", lineHeight: 1.1 }}>First Thought</div>
-            <div style={{ fontFamily: "Raleway, sans-serif", fontSize: 11, fontWeight: 600, color: "#18BC9C", lineHeight: 1.1 }}>Initiative</div>
-          </div>
+    style={{ height: 75, width: "auto", objectFit: "contain" }} />
         </Link>
 
         {/* Desktop links */}

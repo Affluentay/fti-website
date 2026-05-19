@@ -21,7 +21,11 @@ export default function Contact() {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.message) return;
+    alert("Button clicked!");
+    if (!form.name || !form.email || !form.message) {
+      alert("Fields missing!");
+      return;
+    }
     try {
       await emailjs.send(
         "service_34p0rro",
@@ -37,10 +41,9 @@ export default function Contact() {
       setSubmitted(true);
     } catch (e) {
       console.error(e);
-      alert("Failed to send message. Please try again.");
+      alert("Failed: " + e.message);
     }
   };
-
   return (
     <div style={{ paddingTop: 70 }}>
 

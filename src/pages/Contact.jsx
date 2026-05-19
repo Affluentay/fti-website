@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+emailjs.init("p_r2a_pq32kT-uPpH");
 import { useEffect, useState } from "react";
 
 function useScrollReveal() {
@@ -36,7 +37,6 @@ export default function Contact() {
           subject: form.subject,
           message: form.message,
         },
-        "33mkqMOStbsw5KdNr"
       );
       setSubmitted(true);
     } catch (e) {

@@ -20,10 +20,10 @@ export default function Donate() {
   const [customAmount, setCustomAmount] = useState("");
 
   const bankDetails = {
-    bankName: "First Bank of Nigeria",
-    accountName: "First Thought Initiative",
-    accountNumber: "0000000000",
-  };
+  bankName: "Access Bank",
+  accountName: "Omobude Iwinosa Favour",
+  accountNumber: "1832086808",
+};
 
   const handleCopy = (text, label) => {
     navigator.clipboard.writeText(text);

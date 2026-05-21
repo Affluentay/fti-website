@@ -1,4 +1,3 @@
-emailjs.init("p_r2a_pq32kT-uPpH");
 import { useEffect, useState } from "react";
 
 function useScrollReveal() {

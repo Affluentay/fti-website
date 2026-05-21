@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 function useScrollReveal() {
   useEffect(() => {
     const elements = document.querySelectorAll(".scroll-reveal");

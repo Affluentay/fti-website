@@ -19,12 +19,30 @@ export default function Volunteer() {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.name || !form.email || !form.phone) return;
-    setSubmitted(true);
+    try {
+      const response = await fetch("https://formspree.io/f/xvzyzbdz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          role: form.role,
+          message: form.message,
+        }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send. Please try again.");
+      }
+    } catch (e) {
+      alert("Error: " + e.message);
+    }
   };
-
-  return (
+return (
     <div style={{ paddingTop: 70 }}>
 
       {/* PAGE HERO */}

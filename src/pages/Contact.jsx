@@ -1,4 +1,3 @@
-import emailjs from "@emailjs/browser";
 emailjs.init("p_r2a_pq32kT-uPpH");
 import { useEffect, useState } from "react";
 
@@ -22,26 +21,28 @@ export default function Contact() {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async () => {
-    alert("Button clicked!");
     if (!form.name || !form.email || !form.message) {
-      alert("Fields missing!");
+      alert("Please fill all required fields");
       return;
     }
     try {
-      await emailjs.send(
-        "service_34p0rro",
-        "template_pm2wdpu",
-        {
-          from_name: form.name,
-          from_email: form.email,
+      const response = await fetch("https://formspree.io/f/xvzyzbdz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
           subject: form.subject,
           message: form.message,
-        },
-      );
-      setSubmitted(true);
+        }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send. Please try again.");
+      }
     } catch (e) {
-      console.error(e);
-      alert("Failed: " + e.message);
+      alert("Error: " + e.message);
     }
   };
   return (

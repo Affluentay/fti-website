@@ -15,7 +15,7 @@ export default function Contact() {
   useScrollReveal();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
-
+const [loading, setLoading] = useState(false);
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async () => {
@@ -218,16 +218,16 @@ export default function Contact() {
                   />
                 </div>
 
-                <button onClick={handleSubmit} style={{
-                  width: "100%", padding: "15px", borderRadius: 30,
-                  background: "linear-gradient(135deg, #18BC9C, #0fa880)",
-                  color: "#fff", fontFamily: "Raleway, sans-serif",
-                  fontSize: 16, fontWeight: 800, border: "none", cursor: "pointer",
-                  boxShadow: "0 8px 25px rgba(24,188,156,0.4)",
-                  transition: "all 0.3s",
-                }}>
-                  Send Message 🧡
-                </button>
+                <button onClick={handleSubmit} disabled={loading} style={{
+  width: "100%", padding: "15px", borderRadius: 30,
+  background: loading ? "#aaa" : "linear-gradient(135deg, #18BC9C, #0fa880)",
+  color: "#fff", fontFamily: "Raleway, sans-serif",
+  fontSize: 16, fontWeight: 800, border: "none",
+  cursor: loading ? "not-allowed" : "pointer",
+  boxShadow: "0 8px 25px rgba(24,188,156,0.4)",
+}}>
+  {loading ? "Sending... " : "Send Message 🧡"}
+</button>
               </div>
             )}
           </div>

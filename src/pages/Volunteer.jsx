@@ -16,11 +16,15 @@ export default function Volunteer() {
   useScrollReveal();
   const [form, setForm] = useState({ name: "", email: "", phone: "", role: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
-
+const [loading, setLoading] = useState(false);
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.phone) return;
+    if (!form.name || !form.email || !form.message) {
+      alert("Please fill all required fields");
+      return;
+    }
+    setLoading(true);
     try {
       const response = await fetch("https://formspree.io/f/xvzyzbdz", {
         method: "POST",
@@ -28,8 +32,7 @@ export default function Volunteer() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          phone: form.phone,
-          role: form.role,
+          subject: form.subject,
           message: form.message,
         }),
       });
@@ -41,6 +44,7 @@ export default function Volunteer() {
     } catch (e) {
       alert("Error: " + e.message);
     }
+    setLoading(false);
   };
 return (
     <div style={{ paddingTop: 70 }}>
@@ -257,16 +261,16 @@ return (
                 />
               </div>
 
-              <button onClick={handleSubmit} style={{
-                width: "100%", padding: "16px", borderRadius: 30,
-                background: "linear-gradient(135deg, #18BC9C, #0fa880)",
-                color: "#fff", fontFamily: "Raleway, sans-serif",
-                fontSize: 16, fontWeight: 800, border: "none", cursor: "pointer",
-                boxShadow: "0 8px 25px rgba(24,188,156,0.4)",
-                transition: "all 0.3s",
-              }}>
-                Submit Application 🧡
-              </button>
+             <button onClick={handleSubmit} disabled={loading} style={{
+  width: "100%", padding: "15px", borderRadius: 30,
+  background: loading ? "#aaa" : "linear-gradient(135deg, #18BC9C, #0fa880)",
+  color: "#fff", fontFamily: "Raleway, sans-serif",
+  fontSize: 16, fontWeight: 800, border: "none",
+  cursor: loading ? "not-allowed" : "pointer",
+  boxShadow: "0 8px 25px rgba(24,188,156,0.4)",
+}}>
+  {loading ? "Submitting... " : "Submit application"}
+</button>
             </div>
           )}
         </div>

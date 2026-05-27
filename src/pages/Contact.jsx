@@ -98,6 +98,7 @@ const [loading, setLoading] = useState(false);
                 background: "#fff", borderRadius: 16,
                 boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
                 borderLeft: `4px solid ${item.color}`,
+                overflow: "hidden", width: "100%"
               }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: 12,

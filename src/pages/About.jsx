@@ -283,10 +283,10 @@ export default function About() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 28 }}>
             {[
-              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director" },
-              { img: "/images/Flourish.jpeg", name: "Flourish Omobude", role: "Communications & Social Media Manager" },
-              { img: "/images/ayomide.png", name: "Ayomide Lawal", role: "Creative Design, Branding & Web Developer" },
-              { img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator" },
+              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director", pos: "center 20%" },
+{ img: "/images/Flourish.jpeg", name: "Flourish Omobude", role: "Communications & Social Media Manager", pos: "center 30%" },
+{ img: "/images/ayomide.png", name: "Ayomide Lawal", role: "Creative Design, Branding & Web Developer", pos: "center 10%" },
+{ img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator", pos: "center 10%" },
             ].map((member, i) => (
               <div key={i} className="scroll-reveal" style={{
   background: "#fff", borderRadius: 20,
@@ -301,7 +301,7 @@ export default function About() {
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
   }}>
     <img src={member.img} alt={member.name}
-      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: member.pos }} />
   </div>
   <h3 style={{ fontFamily: "Raleway, sans-serif", fontSize: 17, fontWeight: 800, color: "#2C3E50", marginBottom: 6 }}>
     {member.name}

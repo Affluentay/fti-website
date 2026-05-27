@@ -190,7 +190,7 @@ export default function About() {
               boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
             }}>
               <img
-                src="/images/founder.jpeg"
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80"
                 alt="Founder"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -220,52 +220,6 @@ export default function About() {
             <p style={{ fontSize: 15, color: "#555", lineHeight: 1.9 }}>
               FTI is not just an organization. It is a promise — that as long as we exist, no child within our reach will feel forgotten.
             </p>
-          </div>
-        </div>
-      </section>
-      {/* TEAM SECTION */}
-      <section style={{ padding: "100px 40px", background: "#f4f6f8" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 60 }} className="scroll-reveal">
-            <span style={{
-              display: "inline-block", background: "rgba(24,188,156,0.1)",
-              color: "#18BC9C", padding: "6px 16px", borderRadius: 20,
-              fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", marginBottom: 16,
-            }}>Our People</span>
-            <h2 style={{ fontFamily: "Raleway, sans-serif", fontSize: 38, fontWeight: 800, color: "#2C3E50" }}>
-              Meet the Team
-            </h2>
-            <p style={{ fontSize: 15, color: "#666", marginTop: 12 }}>
-              The hearts behind First Thought Initiative.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 28 }}>
-            {[
-              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director" },
-              { img: "/images/Flourish.jpeg", name: "Flourish Omobude", role: "Communications & Social Media Manager" },
-              { img: "/images/ayomide.png", name: "Ayomide Lawal", role: "Creative Design, Branding & Web Developer" },
-              { img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator" },
-            ].map((member, i) => (
-              <div key={i} className="scroll-reveal" style={{
-                background: "#fff", borderRadius: 20,
-                overflow: "hidden",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-                transition: "all 0.3s",
-                textAlign: "center",
-              }}>
-                <div style={{ height: 260, overflow: "hidden" }}>
-                  <img src={member.img} alt={member.name}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
-                </div>
-                <div style={{ padding: "20px 16px" }}>
-                  <h3 style={{ fontFamily: "Raleway, sans-serif", fontSize: 17, fontWeight: 800, color: "#2C3E50", marginBottom: 6 }}>
-                    {member.name}
-                  </h3>
-                  <p style={{ fontSize: 13, color: "#18BC9C", fontWeight: 600, lineHeight: 1.5 }}>{member.role}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -338,6 +292,5 @@ export default function About() {
       </section>
 
     </div>
-    
   );
 }

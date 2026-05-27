@@ -213,7 +213,7 @@ export default function Donate() {
                   width: 44, height: 44, borderRadius: "50%",
                   overflow: "hidden", border: "2px solid #18BC9C",
                 }}>
-                  <img src="/images/crolax.png" alt="Founder"
+                  <img src="/images/founder.jpeg" alt="Founder"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
                 <div>

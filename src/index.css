@@ -46,6 +46,9 @@ div[style*="borderLeft"] { margin-right: 0 !important; }
   nav img { height: 65px !important; width: auto !important; }
   body { overflow-x: hidden; }
   * { box-sizing: border-box; }
+  /* Team section mobile */
+div[style*="repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+div[style*="height: 300"] { height: 320px !important; }
 
   /* Navbar - show hamburger */
   nav { padding: 0 16px !important; height: 60px !important; }

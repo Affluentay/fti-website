@@ -289,23 +289,25 @@ export default function About() {
               { img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator" },
             ].map((member, i) => (
               <div key={i} className="scroll-reveal" style={{
-                background: "#fff", borderRadius: 20,
-                overflow: "hidden",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-                transition: "all 0.3s",
-                textAlign: "center",
-              }}>
-                <div style={{ height: 300, overflow: "hidden" }}>
-                  <img src={member.img} alt={member.name}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }} />
-                </div>
-                <div style={{ padding: "20px 16px" }}>
-                  <h3 style={{ fontFamily: "Raleway, sans-serif", fontSize: 17, fontWeight: 800, color: "#2C3E50", marginBottom: 6 }}>
-                    {member.name}
-                  </h3>
-                  <p style={{ fontSize: 13, color: "#18BC9C", fontWeight: 600, lineHeight: 1.5 }}>{member.role}</p>
-                </div>
-              </div>
+  background: "#fff", borderRadius: 20,
+  padding: "32px 20px",
+  boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+  textAlign: "center",
+}}>
+  <div style={{
+    width: 140, height: 140, borderRadius: "50%",
+    overflow: "hidden", margin: "0 auto 16px",
+    border: "4px solid #18BC9C",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+  }}>
+    <img src={member.img} alt={member.name}
+      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+  </div>
+  <h3 style={{ fontFamily: "Raleway, sans-serif", fontSize: 17, fontWeight: 800, color: "#2C3E50", marginBottom: 6 }}>
+    {member.name}
+  </h3>
+  <p style={{ fontSize: 13, color: "#18BC9C", fontWeight: 600, lineHeight: 1.5 }}>{member.role}</p>
+</div>
             ))}
           </div>
         </div>

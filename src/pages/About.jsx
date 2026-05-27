@@ -295,9 +295,9 @@ export default function About() {
                 transition: "all 0.3s",
                 textAlign: "center",
               }}>
-                <div style={{ height: 260, overflow: "hidden" }}>
+                <div style={{ height: 300, overflow: "hidden" }}>
                   <img src={member.img} alt={member.name}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }} />
                 </div>
                 <div style={{ padding: "20px 16px" }}>
                   <h3 style={{ fontFamily: "Raleway, sans-serif", fontSize: 17, fontWeight: 800, color: "#2C3E50", marginBottom: 6 }}>

@@ -283,8 +283,8 @@ export default function About() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 28 }}>
             {[
-              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director", pos: "center 20%" },
-{ img: "/images/Flourish.jpeg", name: "Flourish Omobude", role: "Communications & Social Media Manager", pos: "center 30%" },
+              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director", pos: "center 40%" },
+{ img: "/images/Flourish.jpeg", name: "Flourish Omobude", role: "Communications & Social Media Manager", pos: "center 40%" },
 { img: "/images/ayomide.png", name: "Ayomide Lawal", role: "Creative Design, Branding & Web Developer", pos: "center 10%" },
 { img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator", pos: "center 10%" },
             ].map((member, i) => (

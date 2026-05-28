@@ -192,7 +192,7 @@ export default function About() {
               <img
                 src="/images/founder.jpeg"
                 alt="Founder"
-                style={{ width: "100", height: "100", objectFit: "cover" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
             <h3 style={{ fontFamily: "Raleway, sans-serif", fontSize: 22, fontWeight: 800, color: "#2C3E50" }}>
@@ -295,7 +295,7 @@ export default function About() {
   textAlign: "center",
 }}>
   <div style={{
-    width: 180, height: 180, borderRadius: "50%",
+    width: 220, height: 220, borderRadius: "50%",
     overflow: "hidden", margin: "0 auto 16px",
     border: "4px solid #18BC9C",
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",

@@ -154,7 +154,7 @@ export default function Home() {
               padding: "14px 36px", borderRadius: 30, background: "#18BC9C",
               color: "#fff", fontWeight: 700, fontSize: 15, display: "inline-block",
               boxShadow: "0 8px 25px rgba(24,188,156,0.4)",
-            }}>Donate Now 🧡</Link>
+            }}>Donate Now </Link>
             <Link to="/about" style={{
               padding: "14px 36px", borderRadius: 30, background: "transparent",
               color: "#fff", fontWeight: 600, fontSize: 15, display: "inline-block",
@@ -172,10 +172,10 @@ export default function Home() {
       <section style={{ background: "#18BC9C", padding: "50px 40px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
           {[
-            { number: 105, suffix: "+", label: "Children Reached", icon: "👧" },
-            { number: 2, suffix: "+", label: "Years of Impact", icon: "📅" },
-            { number: 3, suffix: "", label: "Active Programs", icon: "🎯" },
-            { number: 67, suffix: "+", label: "Children in 2024", icon: "🌟" },
+            { number: 105, suffix: "+", label: "Children Reached",  },
+            { number: 2, suffix: "+", label: "Years of Impact",  },
+            { number: 3, suffix: "", label: "Active Programs", },
+            { number: 67, suffix: "+", label: "Children in 2024", },
           ].map((stat, i) => (
             <div key={i} style={{
               background: "rgba(255,255,255,0.15)", backdropFilter: "blur(10px)",
@@ -199,9 +199,9 @@ export default function Home() {
             <img src="/images/Untitled design.png" alt="FTI Outreach"
               style={{ width: "100%", height: 230, objectFit: "cover", borderRadius: 16, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} />
             <img src="/images/crolax.png" alt="FTI Outreach"
-              style={{ width: "100%", height: 230, objectFit: "cover", borderRadius: 16, marginTop: 28, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} />
+              style={{ width: "100%", height: 230, objectFit: "cover", borderRadius: 16,  boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} />
             <img src="/images/Untitled design (2).png" alt="Children"
-              style={{ width: "100%", height: 230, objectFit: "cover", borderRadius: 16, marginTop: -28, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} />
+              style={{ width: "100%", height: 230, objectFit: "cover", borderRadius: 16,  boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }} />
             <div style={{
               background: "#2C3E50", borderRadius: 16, height: 230,
               display: "flex", flexDirection: "column",

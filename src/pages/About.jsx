@@ -184,7 +184,7 @@ export default function About() {
         }}>
           <div className="scroll-reveal" style={{ textAlign: "center" }}>
             <div style={{
-              width: 180, height: 180, borderRadius: "50%",
+              width: 180, height: 180, borderRadius: "50%", /* For size correction*/
               overflow: "hidden", margin: "0 auto 20px",
               border: "5px solid #18BC9C",
               boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
@@ -295,7 +295,7 @@ export default function About() {
   textAlign: "center",
 }}>
   <div style={{
-    width: 180, height: 180, borderRadius: "50%",
+    width: 180, height: 180, borderRadius: "50%", /* For size correction*/
     overflow: "hidden", margin: "0 auto 16px",
     border: "4px solid #18BC9C",
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",

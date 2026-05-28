@@ -283,10 +283,10 @@ export default function About() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 28 }}>
             {[
-              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director", pos: "center 60%" },
-{ img: "/images/Flourish.jpeg", name: "Flourish Omobude", role: "Communications & Social Media Manager", pos: "center 60%" },
-{ img: "/images/ayomide.png", name: "Ayomide Lawal", role: "Creative Design, Branding & Web Developer", pos: "center 10%" },
-{ img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator", pos: "center 10%" },
+              { img: "/images/founder.jpeg", name: "Iwinosa Omobude", role: "Founder & Executive Director", pos: "center 25%" },
+{ img: "/images/Flourish.jpeg", name: "Oyenmwosa Flourish Omobude", role: "Communications & Social Media Manager", pos: "center 40%" },
+{ img: "/images/ayomide.png", name: "Ayomide Lawal", role: "Creative Design, Branding & Web Developer", pos: "center 15%" },
+{ img: "/images/benjamin.jpeg", name: "Benjamin Ibeh", role: "Prayer & Team Care Coordinator", pos: "center 15%" },
             ].map((member, i) => (
               <div key={i} className="scroll-reveal" style={{
   background: "#fff", borderRadius: 20,
@@ -295,7 +295,7 @@ export default function About() {
   textAlign: "center",
 }}>
   <div style={{
-    width: 140, height: 140, borderRadius: "50%",
+    width: 160, height: 160, borderRadius: "50%",
     overflow: "hidden", margin: "0 auto 16px",
     border: "4px solid #18BC9C",
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
